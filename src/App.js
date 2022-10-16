@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import NavBar from "./components/AppBar/NavBar"
+import Map from "./components/Map/Map"
+import List from "./components/List/List"
+import pengepulsData from "./data/pengepul"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+	const [pengepuls, setPengepuls] = useState([])
+
+	return (
+		<>
+			<NavBar />
+			<Map pengepuls={pengepulsData.data.pengepuls} style= {{position: "sticky"}} />
+			<List pengepuls={pengepulsData.data.pengepuls} />
+		</>
+	)
 }
 
 export default App;
