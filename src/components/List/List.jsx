@@ -3,18 +3,16 @@ import React from "react"
 import useStyles from "./style"
 import PengepulCard from "./../PengepulCard/PengepulCard"
 
-const List = ( {pengepuls} ) => {
+const List = ( {pengepuls, setdirectionsResponse, setdetailPengepul} ) => {
 
 	const classes = useStyles();
-
-	console.log(pengepuls)
 
 	return (
 		<div className={classes.list}>
 			{
 				pengepuls.map((pengepul => (
 					// <h4>{pengepul.name}</h4>
-					<PengepulCard pengepul={pengepul} />
+					<PengepulCard pengepul={pengepul} setdetailPengepul={setdetailPengepul} setdirectionsResponse={setdirectionsResponse} />
 				)))
 			}
 		</div>

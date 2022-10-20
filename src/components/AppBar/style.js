@@ -4,7 +4,7 @@ import { green } from "@mui/material/colors";
 
 export default makeStyles(() => ({
 	appBar: {
-		background: 'linear-gradient(45deg, #32a852 30%, #32a852 90%)',
+		background: 'linear-gradient(45deg, #1A2623 30%, #1A2623 90%)',
 		position: 'fixed',
 	},
 	box : {
